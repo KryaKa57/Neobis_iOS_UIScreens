@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class LobbyViewController: UIViewController {
 
@@ -14,11 +15,11 @@ class LobbyViewController: UIViewController {
     let financeButton = UIButton()
     let travelButton = UIButton()
     let singlesButton = UIButton()
+    let buttonStackView = UIStackView()
     
     var buttons: [UIButton] = [UIButton]()
     var buttonTitles: [String] = ["weather", "crypto", "finance", "travel", "singles"]
     
-    let buttonStackView = UIStackView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,7 @@ class LobbyViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
     }
 
-    func setUpButtons() {
+    private func setUpButtons() {
         var index = 0
         for button in buttons {
             //Configure buttons
@@ -53,13 +54,11 @@ class LobbyViewController: UIViewController {
         buttonStackView.axis = .vertical
         buttonStackView.translatesAutoresizingMaskIntoConstraints = false
         
-        //Constraints of stack view
-        NSLayoutConstraint.activate([
-            buttonStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            buttonStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            buttonStackView.widthAnchor.constraint(equalToConstant: 200)
-            
-        ])
+        self.buttonStackView.snp.makeConstraints { [weak self] (make) in
+            guard self != nil else { return }
+            make.centerX.centerY.equalToSuperview()
+            make.width.equalToSuperview().multipliedBy(0.6)
+        }
     }
     
     @objc func goToNextScreen(sender: UIButton) {
@@ -68,7 +67,7 @@ class LobbyViewController: UIViewController {
         case buttonTitles[0]:
             nextScreen = WeatherScreen()
         case buttonTitles[1]:
-            nextScreen = CryptoScreen()
+            nextScreen = CryptScreen()
         case buttonTitles[2]:
             nextScreen = FinanceScreen()
         case buttonTitles[3]:
@@ -78,7 +77,6 @@ class LobbyViewController: UIViewController {
         default:
             nextScreen = WeatherScreen()
         }
-        nextScreen.title = sender.titleLabel?.text ?? ""
         navigationController?.pushViewController(nextScreen, animated: true)
     }
 }
