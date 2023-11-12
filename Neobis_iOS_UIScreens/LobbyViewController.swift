@@ -26,8 +26,9 @@ class LobbyViewController: UIViewController {
         buttons = [self.weatherButton, self.cryptoButton, self.financeButton, self.travelButton, self.singlesButton]
         setUpButtons()
         view.backgroundColor = .systemBackground
-        title = "Lobby"
-        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Neobis Club. Project 4"
+        navigationItem.backButtonTitle = "Go to Lobby"
+        navigationItem.backButtonDisplayMode = .minimal
     }
 
     private func setUpButtons() {
@@ -65,17 +66,17 @@ class LobbyViewController: UIViewController {
         var nextScreen: UIViewController
         switch (sender.titleLabel?.text){
         case buttonTitles[0]:
-            nextScreen = WeatherScreen()
+            nextScreen = WeatherViewController()
         case buttonTitles[1]:
-            nextScreen = CryptScreen()
+            nextScreen = TabController()
         case buttonTitles[2]:
-            nextScreen = FinanceScreen()
+            nextScreen = TabController()
         case buttonTitles[3]:
-            nextScreen = TravelScreen()
+            nextScreen = TravelViewController()
         case buttonTitles[4]:
-            nextScreen = SinglesScreen()
+            nextScreen = SinglesViewController()
         default:
-            nextScreen = WeatherScreen()
+            nextScreen = WeatherViewController()
         }
         navigationController?.pushViewController(nextScreen, animated: true)
     }

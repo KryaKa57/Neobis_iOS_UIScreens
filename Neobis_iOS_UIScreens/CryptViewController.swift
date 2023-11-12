@@ -9,7 +9,7 @@ import Foundation
 import SnapKit
 import UIKit
 
-class CryptScreen: UIViewController {
+class CryptViewController: UIViewController {
     private let portfolioLabel = UILabel()
     private let settingButton = UIButton()
     private let headerStackView = UIStackView()
@@ -25,9 +25,9 @@ class CryptScreen: UIViewController {
     }
     
     private func fillInTheData() {
-        cryptData.append(Crypt(name: "Bitcoin", growthPercent: 1.6, priceInDollar: 29850.15, priceInCrypt: 2.73, currencyCrypt: "BTC", logoImageName: "bitcoin-logo"))
-        cryptData.append(Crypt(name: "Ethereum", growthPercent: -0.82, priceInDollar: 10561.24, priceInCrypt: 47.61, currencyCrypt: "ETH", logoImageName: "eth-symbol-virgil"))
-        cryptData.append(Crypt(name: "Litecoin", growthPercent: -2.1, priceInDollar: 3676.76, priceInCrypt: 39.27, currencyCrypt: "LTC", logoImageName: "vector"))
+        cryptData.append(Crypt(name: "Bitcoin", color: 0xF6543E, growthPercent: 1.6, priceInDollar: 29850.15, priceInCrypt: 2.73, currencyCrypt: "BTC", logoImageName: "bitcoin-logo"))
+        cryptData.append(Crypt(name: "Ethereum", color: 0x6374C3, growthPercent: -0.82, priceInDollar: 10561.24, priceInCrypt: 47.61, currencyCrypt: "ETH", logoImageName: "eth-symbol-virgil"))
+        cryptData.append(Crypt(name: "Litecoin", color: 0x30E0A1, growthPercent: -2.1, priceInDollar: 3676.76, priceInCrypt: 39.27, currencyCrypt: "LTC", logoImageName: "vector"))
         cryptData.append(Crypt())
         cryptData.append(Crypt())
         cryptData.append(Crypt())
@@ -42,7 +42,7 @@ class CryptScreen: UIViewController {
         view.addSubview(portfolioLabel)
         
         settingButton.setImage(UIImage(systemName: "gearshape"), for: .normal)
-        settingButton.tintColor = .black
+        settingButton.tintColor = UIColor(rgb: 0xB9C1D9)
         settingButton.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(settingButton)
         
@@ -64,7 +64,7 @@ class CryptScreen: UIViewController {
     private func setConstraints() {
         self.headerStackView.snp.makeConstraints {[weak self] (make) in
             guard self != nil else {return}
-            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 0.15)
+            make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 0.1)
             make.left.right.equalToSuperview().inset(32)
         }
         
@@ -75,17 +75,15 @@ class CryptScreen: UIViewController {
         
         self.cryptTableView.snp.makeConstraints {[weak self] (make) in
             guard self != nil else {return}
-            make.top.equalTo(headerStackView.snp.bottom).offset(20)
+            make.top.equalTo(headerStackView.snp.bottom).offset(16)
             make.left.right.equalToSuperview().inset(32)
-            
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
+            make.bottom.equalToSuperview()
         }
     }
 }
 
 
-extension CryptScreen: UITableViewDataSource, UITableViewDelegate {
+extension CryptViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cryptData.count
     }
@@ -94,8 +92,30 @@ extension CryptScreen: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CryptTableViewCell.identifier, for: indexPath) as? CryptTableViewCell else {
             return UITableViewCell()
         }
+        let growthPercent = cryptData[indexPath.row].growthPercent
         cell.nameLabel.text = cryptData[indexPath.row].name
-        cell.growthPercent.text = "\(cryptData[indexPath.row].growthPercent)%"
+        cell.growthPercent.text = (growthPercent > 0 ? "+" : "") + "\(growthPercent)%"
+        cell.priceInDollar.text = "$\(cryptData[indexPath.row].priceInDollar)"
+        cell.priceInCrypt.text = "\(cryptData[indexPath.row].priceInCrypt) \(cryptData[indexPath.row].currencyCrypt)"
+        cell.logoButton.setImage(UIImage(named: "\(cryptData[indexPath.row].name)"), for: .normal)
+        cell.logoButton.backgroundColor = UIColor(rgb: cryptData[indexPath.row].color).withAlphaComponent(0.1)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 84.0
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerLabel = UILabel()
+        headerLabel.text = "посмотреть все"
+        headerLabel.font = .systemFont(ofSize: 14)
+        headerLabel.textAlignment = .right
+        headerLabel.textColor = UIColor(rgb: 0xF6543E)
+    
+        return headerLabel
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 24
     }
 }

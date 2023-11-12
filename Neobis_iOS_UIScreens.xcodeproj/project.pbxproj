@@ -13,13 +13,16 @@
 		644AFA182AF9829600F31B45 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA172AF9829600F31B45 /* LobbyViewController.swift */; };
 		644AFA1D2AF9829700F31B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 644AFA1C2AF9829700F31B45 /* Assets.xcassets */; };
 		644AFA202AF9829700F31B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 644AFA1E2AF9829700F31B45 /* LaunchScreen.storyboard */; };
-		644AFA2A2AFB41AE00F31B45 /* WeatherScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA292AFB41AE00F31B45 /* WeatherScreen.swift */; };
-		644AFA2C2AFB41BE00F31B45 /* FinanceScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA2B2AFB41BE00F31B45 /* FinanceScreen.swift */; };
-		644AFA2E2AFB41D100F31B45 /* CryptScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA2D2AFB41D100F31B45 /* CryptScreen.swift */; };
-		644AFA302AFB41E900F31B45 /* TravelScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA2F2AFB41E900F31B45 /* TravelScreen.swift */; };
-		644AFA322AFB41F800F31B45 /* SinglesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA312AFB41F800F31B45 /* SinglesScreen.swift */; };
+		644AFA2A2AFB41AE00F31B45 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA292AFB41AE00F31B45 /* WeatherViewController.swift */; };
+		644AFA2C2AFB41BE00F31B45 /* FinanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA2B2AFB41BE00F31B45 /* FinanceViewController.swift */; };
+		644AFA2E2AFB41D100F31B45 /* CryptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA2D2AFB41D100F31B45 /* CryptViewController.swift */; };
+		644AFA302AFB41E900F31B45 /* TravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA2F2AFB41E900F31B45 /* TravelViewController.swift */; };
+		644AFA322AFB41F800F31B45 /* SinglesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA312AFB41F800F31B45 /* SinglesViewController.swift */; };
 		644AFA342AFCF05100F31B45 /* CryptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA332AFCF05100F31B45 /* CryptTableViewCell.swift */; };
 		644AFA362AFCF1E200F31B45 /* Crypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA352AFCF1E200F31B45 /* Crypt.swift */; };
+		644AFA3A2B011F0B00F31B45 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA392B011F0B00F31B45 /* TabController.swift */; };
+		644AFA3C2B0131A500F31B45 /* Finance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA3B2B0131A500F31B45 /* Finance.swift */; };
+		644AFA3E2B0135C600F31B45 /* FinanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA3D2B0135C600F31B45 /* FinanceTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,13 +34,16 @@
 		644AFA1C2AF9829700F31B45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		644AFA1F2AF9829700F31B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		644AFA212AF9829700F31B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		644AFA292AFB41AE00F31B45 /* WeatherScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherScreen.swift; sourceTree = "<group>"; };
-		644AFA2B2AFB41BE00F31B45 /* FinanceScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceScreen.swift; sourceTree = "<group>"; };
-		644AFA2D2AFB41D100F31B45 /* CryptScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptScreen.swift; sourceTree = "<group>"; };
-		644AFA2F2AFB41E900F31B45 /* TravelScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelScreen.swift; sourceTree = "<group>"; };
-		644AFA312AFB41F800F31B45 /* SinglesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglesScreen.swift; sourceTree = "<group>"; };
+		644AFA292AFB41AE00F31B45 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		644AFA2B2AFB41BE00F31B45 /* FinanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceViewController.swift; sourceTree = "<group>"; };
+		644AFA2D2AFB41D100F31B45 /* CryptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptViewController.swift; sourceTree = "<group>"; };
+		644AFA2F2AFB41E900F31B45 /* TravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelViewController.swift; sourceTree = "<group>"; };
+		644AFA312AFB41F800F31B45 /* SinglesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglesViewController.swift; sourceTree = "<group>"; };
 		644AFA332AFCF05100F31B45 /* CryptTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptTableViewCell.swift; sourceTree = "<group>"; };
 		644AFA352AFCF1E200F31B45 /* Crypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypt.swift; sourceTree = "<group>"; };
+		644AFA392B011F0B00F31B45 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		644AFA3B2B0131A500F31B45 /* Finance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finance.swift; sourceTree = "<group>"; };
+		644AFA3D2B0135C600F31B45 /* FinanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceTableViewCell.swift; sourceTree = "<group>"; };
 		98D1E3D34F497C99E43F231F /* Pods-Neobis_iOS_UIScreens.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_UIScreens.debug.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_UIScreens/Pods-Neobis_iOS_UIScreens.debug.xcconfig"; sourceTree = "<group>"; };
 		B25D99F9C142111BFB94B36E /* Pods-Neobis_iOS_UIScreens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_UIScreens.release.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_UIScreens/Pods-Neobis_iOS_UIScreens.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,13 +101,16 @@
 				644AFA132AF9829600F31B45 /* AppDelegate.swift */,
 				644AFA152AF9829600F31B45 /* SceneDelegate.swift */,
 				644AFA172AF9829600F31B45 /* LobbyViewController.swift */,
-				644AFA292AFB41AE00F31B45 /* WeatherScreen.swift */,
-				644AFA2D2AFB41D100F31B45 /* CryptScreen.swift */,
+				644AFA392B011F0B00F31B45 /* TabController.swift */,
+				644AFA292AFB41AE00F31B45 /* WeatherViewController.swift */,
+				644AFA2D2AFB41D100F31B45 /* CryptViewController.swift */,
 				644AFA332AFCF05100F31B45 /* CryptTableViewCell.swift */,
 				644AFA352AFCF1E200F31B45 /* Crypt.swift */,
-				644AFA2B2AFB41BE00F31B45 /* FinanceScreen.swift */,
-				644AFA2F2AFB41E900F31B45 /* TravelScreen.swift */,
-				644AFA312AFB41F800F31B45 /* SinglesScreen.swift */,
+				644AFA2B2AFB41BE00F31B45 /* FinanceViewController.swift */,
+				644AFA3D2B0135C600F31B45 /* FinanceTableViewCell.swift */,
+				644AFA3B2B0131A500F31B45 /* Finance.swift */,
+				644AFA2F2AFB41E900F31B45 /* TravelViewController.swift */,
+				644AFA312AFB41F800F31B45 /* SinglesViewController.swift */,
 				644AFA1C2AF9829700F31B45 /* Assets.xcassets */,
 				644AFA1E2AF9829700F31B45 /* LaunchScreen.storyboard */,
 				644AFA212AF9829700F31B45 /* Info.plist */,
@@ -224,13 +233,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				644AFA182AF9829600F31B45 /* LobbyViewController.swift in Sources */,
-				644AFA2C2AFB41BE00F31B45 /* FinanceScreen.swift in Sources */,
+				644AFA2C2AFB41BE00F31B45 /* FinanceViewController.swift in Sources */,
 				644AFA142AF9829600F31B45 /* AppDelegate.swift in Sources */,
-				644AFA322AFB41F800F31B45 /* SinglesScreen.swift in Sources */,
-				644AFA302AFB41E900F31B45 /* TravelScreen.swift in Sources */,
-				644AFA2A2AFB41AE00F31B45 /* WeatherScreen.swift in Sources */,
+				644AFA322AFB41F800F31B45 /* SinglesViewController.swift in Sources */,
+				644AFA3C2B0131A500F31B45 /* Finance.swift in Sources */,
+				644AFA3A2B011F0B00F31B45 /* TabController.swift in Sources */,
+				644AFA302AFB41E900F31B45 /* TravelViewController.swift in Sources */,
+				644AFA2A2AFB41AE00F31B45 /* WeatherViewController.swift in Sources */,
 				644AFA362AFCF1E200F31B45 /* Crypt.swift in Sources */,
-				644AFA2E2AFB41D100F31B45 /* CryptScreen.swift in Sources */,
+				644AFA3E2B0135C600F31B45 /* FinanceTableViewCell.swift in Sources */,
+				644AFA2E2AFB41D100F31B45 /* CryptViewController.swift in Sources */,
 				644AFA162AF9829600F31B45 /* SceneDelegate.swift in Sources */,
 				644AFA342AFCF05100F31B45 /* CryptTableViewCell.swift in Sources */,
 			);
