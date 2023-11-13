@@ -142,12 +142,12 @@ extension FinanceViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let vw = UIView()
         vw.backgroundColor = UIColor.clear
-        let titleLabel = UILabel(frame: CGRect(x:0,y: 0 ,width:tableView.frame.size.width,height:50))
+        let titleLabel = UILabel(frame: CGRect(x:0,y: 0 ,width:tableView.frame.size.width,height:72))
         titleLabel.numberOfLines = 0;
         titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.backgroundColor = UIColor.clear
         titleLabel.font = UIFont.systemFont(ofSize: 16)
-        titleLabel.text  = "см. еще"
+        titleLabel.text  = "Cм. еще"
         titleLabel.textAlignment = .center
         vw.addSubview(titleLabel)
         return vw

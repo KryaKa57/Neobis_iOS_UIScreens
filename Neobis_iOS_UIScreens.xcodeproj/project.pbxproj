@@ -23,6 +23,8 @@
 		644AFA3A2B011F0B00F31B45 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA392B011F0B00F31B45 /* TabController.swift */; };
 		644AFA3C2B0131A500F31B45 /* Finance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA3B2B0131A500F31B45 /* Finance.swift */; };
 		644AFA3E2B0135C600F31B45 /* FinanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA3D2B0135C600F31B45 /* FinanceTableViewCell.swift */; };
+		644AFA402B022A7800F31B45 /* CityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA3F2B022A7800F31B45 /* CityCollectionViewCell.swift */; };
+		644AFA422B0249F000F31B45 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA412B0249F000F31B45 /* City.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		644AFA392B011F0B00F31B45 /* TabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
 		644AFA3B2B0131A500F31B45 /* Finance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Finance.swift; sourceTree = "<group>"; };
 		644AFA3D2B0135C600F31B45 /* FinanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinanceTableViewCell.swift; sourceTree = "<group>"; };
+		644AFA3F2B022A7800F31B45 /* CityCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCollectionViewCell.swift; sourceTree = "<group>"; };
+		644AFA412B0249F000F31B45 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		98D1E3D34F497C99E43F231F /* Pods-Neobis_iOS_UIScreens.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_UIScreens.debug.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_UIScreens/Pods-Neobis_iOS_UIScreens.debug.xcconfig"; sourceTree = "<group>"; };
 		B25D99F9C142111BFB94B36E /* Pods-Neobis_iOS_UIScreens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neobis_iOS_UIScreens.release.xcconfig"; path = "Target Support Files/Pods-Neobis_iOS_UIScreens/Pods-Neobis_iOS_UIScreens.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +114,8 @@
 				644AFA3D2B0135C600F31B45 /* FinanceTableViewCell.swift */,
 				644AFA3B2B0131A500F31B45 /* Finance.swift */,
 				644AFA2F2AFB41E900F31B45 /* TravelViewController.swift */,
+				644AFA3F2B022A7800F31B45 /* CityCollectionViewCell.swift */,
+				644AFA412B0249F000F31B45 /* City.swift */,
 				644AFA312AFB41F800F31B45 /* SinglesViewController.swift */,
 				644AFA1C2AF9829700F31B45 /* Assets.xcassets */,
 				644AFA1E2AF9829700F31B45 /* LaunchScreen.storyboard */,
@@ -243,8 +249,10 @@
 				644AFA362AFCF1E200F31B45 /* Crypt.swift in Sources */,
 				644AFA3E2B0135C600F31B45 /* FinanceTableViewCell.swift in Sources */,
 				644AFA2E2AFB41D100F31B45 /* CryptViewController.swift in Sources */,
+				644AFA422B0249F000F31B45 /* City.swift in Sources */,
 				644AFA162AF9829600F31B45 /* SceneDelegate.swift in Sources */,
 				644AFA342AFCF05100F31B45 /* CryptTableViewCell.swift in Sources */,
+				644AFA402B022A7800F31B45 /* CityCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
