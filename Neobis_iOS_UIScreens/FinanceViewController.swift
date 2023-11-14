@@ -97,14 +97,12 @@ class FinanceViewController: UIViewController {
     }
     
     private func setConstraints() {
-        self.headerStackView.snp.makeConstraints {[weak self] (make) in
-            guard self != nil else {return}
+        self.headerStackView.snp.makeConstraints {(make) in
             make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 0.1)
             make.left.right.equalToSuperview().inset(32)
         }
 
-        self.financeTableView.snp.makeConstraints {[weak self] (make) in
-            guard self != nil else {return}
+        self.financeTableView.snp.makeConstraints {(make) in
             make.top.equalTo(headerStackView.snp.bottom).offset(32)
             make.left.right.equalToSuperview()
             make.bottom.equalToSuperview().inset(124)
@@ -123,11 +121,7 @@ extension FinanceViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FinanceTableViewCell.identifier, for: indexPath) as? FinanceTableViewCell else {
             return UITableViewCell()
         }
-        cell.categoryLabel.text = financeData[indexPath.row].category
-        cell.priceLabel.text = "$\(financeData[indexPath.row].price)"
-        cell.lastPurchaseLabel.text = financeData[indexPath.row].lastPurchase
-        cell.logoButton.setImage(UIImage(named: "\(financeData[indexPath.row].logoImageName)"), for: .normal)
-        cell.logoButton.backgroundColor = UIColor(rgb: financeData[indexPath.row].color)
+        cell.configure(finance: financeData[indexPath.row])
         return cell
     }
     

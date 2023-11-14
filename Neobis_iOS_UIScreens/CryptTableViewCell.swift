@@ -75,22 +75,29 @@ class CryptTableViewCell: UITableViewCell {
     }
     
     private func setConstraints() {
-        self.logoButton.snp.makeConstraints{[weak self] (make) in
-            guard self != nil else {return}
+        self.logoButton.snp.makeConstraints{(make) in
             make.width.height.equalTo(contentView.snp.width).multipliedBy(0.15)
             make.centerY.equalTo(contentView.layoutMarginsGuide)
         }
-        self.nameWithPercentStackView.snp.makeConstraints {[weak self] (make) in
-            guard self != nil else {return}
+        self.nameWithPercentStackView.snp.makeConstraints {(make) in
             make.centerY.equalTo(contentView.layoutMarginsGuide)
             make.left.equalTo(logoButton.snp.right).offset(16)
         }
-        self.pricesStackView.snp.makeConstraints {[weak self] (make) in
-            guard self != nil else {return}
+        self.pricesStackView.snp.makeConstraints {(make) in
             make.centerY.equalTo(contentView.layoutMarginsGuide)
             make.right.equalTo(contentView.snp.right)
             make.bottom.equalTo(nameWithPercentStackView.snp.bottom)
         }
+    }
+    
+    public func configure(crypt: Crypt) {
+        let growthPercent = crypt.growthPercent
+        nameLabel.text = crypt.name
+        self.growthPercent.text = (growthPercent > 0 ? "+" : "") + "\(growthPercent)%"
+        priceInDollar.text = "$\(crypt.priceInDollar)"
+        priceInCrypt.text = "\(crypt.priceInCrypt) \(crypt.currencyCrypt)"
+        logoButton.setImage(UIImage(named: "\(crypt.name)"), for: .normal)
+        logoButton.backgroundColor = UIColor(rgb: crypt.color).withAlphaComponent(0.1)
     }
 }
 

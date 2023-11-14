@@ -45,13 +45,11 @@ class CityCollectionViewCell : UICollectionViewCell {
     }
     
     private func setConstraints() {
-        self.cityNameLabel.snp.makeConstraints{[weak self] (make) in
-            guard self != nil else {return}
+        self.cityNameLabel.snp.makeConstraints{(make) in
             make.centerX.equalTo(contentView)
             make.top.equalTo(contentView.layoutMarginsGuide).offset(contentView.bounds.height * 0.2)
         }
-        self.cityImageView.snp.makeConstraints{[weak self] (make) in
-            guard self != nil else {return}
+        self.cityImageView.snp.makeConstraints{(make) in
             make.height.width.equalTo(contentView.layoutMarginsGuide).multipliedBy(0.95)
             make.centerX.centerY.equalTo(contentView.layoutMarginsGuide)
         }

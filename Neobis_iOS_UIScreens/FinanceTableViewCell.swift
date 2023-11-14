@@ -60,21 +60,26 @@ class FinanceTableViewCell: UITableViewCell {
     }
     
     private func setConstraints() {
-        self.logoButton.snp.makeConstraints{[weak self] (make) in
-            guard self != nil else {return}
+        self.logoButton.snp.makeConstraints{(make) in
             make.width.height.equalTo(contentView.snp.width).multipliedBy(0.1)
             make.centerY.equalTo(contentView.layoutMarginsGuide)
             make.left.equalTo(contentView.snp.left).inset(16)
         }
-        self.categoryLabel.snp.makeConstraints {[weak self] (make) in
-            guard self != nil else {return}
+        self.categoryLabel.snp.makeConstraints {(make) in
             make.centerY.equalTo(contentView.layoutMarginsGuide)
             make.left.equalTo(logoButton.snp.right).offset(16)
         }
-        self.leftSideOfCellStackView.snp.makeConstraints {[weak self] (make) in
-            guard self != nil else {return}
+        self.leftSideOfCellStackView.snp.makeConstraints {(make) in
             make.centerY.equalTo(contentView.layoutMarginsGuide)
             make.right.equalTo(contentView.snp.right).inset(16)
         }
+    }
+    
+    public func configure(finance: Finance) {
+        categoryLabel.text = finance.category
+        priceLabel.text = "$\(finance.price)"
+        lastPurchaseLabel.text = finance.lastPurchase
+        logoButton.setImage(UIImage(named: "\(finance.logoImageName)"), for: .normal)
+        logoButton.backgroundColor = UIColor(rgb: finance.color)
     }
 }

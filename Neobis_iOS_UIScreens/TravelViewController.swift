@@ -99,20 +99,17 @@ class TravelViewController: UIViewController {
     }
     
     private func setConstraints() {
-        self.headerStackView.snp.makeConstraints {[weak self] (make) in
-            guard self != nil else {return}
+        self.headerStackView.snp.makeConstraints {(make) in
             make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 0.1)
             make.left.right.equalToSuperview().inset(32)
         }
-        self.searchBar.snp.makeConstraints {[weak self] (make) in
-            guard self != nil else {return}
+        self.searchBar.snp.makeConstraints {(make) in
             make.top.equalTo(headerStackView.snp.bottom).offset(16)
             make.left.right.equalToSuperview().inset(16)
             make.centerX.equalToSuperview()
             make.height.equalToSuperview().multipliedBy(0.05)
         }
-        self.citiesCollectionView?.snp.makeConstraints {[weak self] (make) in
-            guard self != nil else {return}
+        self.citiesCollectionView?.snp.makeConstraints {(make) in
             make.top.equalTo(searchBar.snp.bottom).offset(8)
             make.left.right.equalToSuperview()
             make.bottom.equalToSuperview().inset(124)

@@ -34,3 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// TODO: weak self убрать со снэпов
+// TODO: configure()
+

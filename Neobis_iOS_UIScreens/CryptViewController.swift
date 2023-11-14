@@ -62,19 +62,16 @@ class CryptViewController: UIViewController {
     }
     
     private func setConstraints() {
-        self.headerStackView.snp.makeConstraints {[weak self] (make) in
-            guard self != nil else {return}
+        self.headerStackView.snp.makeConstraints {(make) in
             make.top.equalToSuperview().offset(UIScreen.main.bounds.height * 0.1)
             make.left.right.equalToSuperview().inset(32)
         }
         
-        self.settingButton.snp.makeConstraints {[weak self] (make) in
-            guard self != nil else {return}
+        self.settingButton.snp.makeConstraints {(make) in
             make.width.equalToSuperview().multipliedBy(0.1)
         }
         
-        self.cryptTableView.snp.makeConstraints {[weak self] (make) in
-            guard self != nil else {return}
+        self.cryptTableView.snp.makeConstraints {(make) in
             make.top.equalTo(headerStackView.snp.bottom).offset(16)
             make.left.right.equalToSuperview().inset(32)
             make.bottom.equalToSuperview()
@@ -92,13 +89,7 @@ extension CryptViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CryptTableViewCell.identifier, for: indexPath) as? CryptTableViewCell else {
             return UITableViewCell()
         }
-        let growthPercent = cryptData[indexPath.row].growthPercent
-        cell.nameLabel.text = cryptData[indexPath.row].name
-        cell.growthPercent.text = (growthPercent > 0 ? "+" : "") + "\(growthPercent)%"
-        cell.priceInDollar.text = "$\(cryptData[indexPath.row].priceInDollar)"
-        cell.priceInCrypt.text = "\(cryptData[indexPath.row].priceInCrypt) \(cryptData[indexPath.row].currencyCrypt)"
-        cell.logoButton.setImage(UIImage(named: "\(cryptData[indexPath.row].name)"), for: .normal)
-        cell.logoButton.backgroundColor = UIColor(rgb: cryptData[indexPath.row].color).withAlphaComponent(0.1)
+        cell.configure(crypt: cryptData[indexPath.row])
         return cell
     }
     
