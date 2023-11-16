@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		23C19986F34B04BE84193F9A /* Pods_Neobis_iOS_UIScreens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 495C88B5F910B4F47988755B /* Pods_Neobis_iOS_UIScreens.framework */; };
+		640FED032B04DF0C00C201E1 /* SecondWeatherViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640FED022B04DF0C00C201E1 /* SecondWeatherViewControl.swift */; };
+		640FED072B04F00200C201E1 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640FED062B04F00200C201E1 /* Weather.swift */; };
+		640FED092B0531AC00C201E1 /* HourlyWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640FED082B0531AC00C201E1 /* HourlyWeatherCollectionViewCell.swift */; };
+		640FED102B054D8400C201E1 /* DailyWeatherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640FED0F2B054D8400C201E1 /* DailyWeatherCollectionViewCell.swift */; };
+		640FED142B057A5400C201E1 /* HeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640FED132B057A5400C201E1 /* HeaderCollectionReusableView.swift */; };
 		644AFA142AF9829600F31B45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA132AF9829600F31B45 /* AppDelegate.swift */; };
 		644AFA162AF9829600F31B45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA152AF9829600F31B45 /* SceneDelegate.swift */; };
-		644AFA182AF9829600F31B45 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA172AF9829600F31B45 /* LobbyViewController.swift */; };
 		644AFA1D2AF9829700F31B45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 644AFA1C2AF9829700F31B45 /* Assets.xcassets */; };
 		644AFA202AF9829700F31B45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 644AFA1E2AF9829700F31B45 /* LaunchScreen.storyboard */; };
 		644AFA2A2AFB41AE00F31B45 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644AFA292AFB41AE00F31B45 /* WeatherViewController.swift */; };
@@ -31,10 +35,14 @@
 
 /* Begin PBXFileReference section */
 		495C88B5F910B4F47988755B /* Pods_Neobis_iOS_UIScreens.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neobis_iOS_UIScreens.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		640FED022B04DF0C00C201E1 /* SecondWeatherViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondWeatherViewControl.swift; sourceTree = "<group>"; };
+		640FED062B04F00200C201E1 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		640FED082B0531AC00C201E1 /* HourlyWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		640FED0F2B054D8400C201E1 /* DailyWeatherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherCollectionViewCell.swift; sourceTree = "<group>"; };
+		640FED132B057A5400C201E1 /* HeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		644AFA102AF9829600F31B45 /* Neobis_iOS_UIScreens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neobis_iOS_UIScreens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		644AFA132AF9829600F31B45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		644AFA152AF9829600F31B45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		644AFA172AF9829600F31B45 /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 		644AFA1C2AF9829700F31B45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		644AFA1F2AF9829700F31B45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		644AFA212AF9829700F31B45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +93,59 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		640FED0A2B0548CE00C201E1 /* Singles */ = {
+			isa = PBXGroup;
+			children = (
+				644AFA312AFB41F800F31B45 /* SinglesViewController.swift */,
+				644AFA452B0277FE00F31B45 /* SinglesTableViewCell.swift */,
+				644AFA432B02757D00F31B45 /* Singles.swift */,
+			);
+			path = Singles;
+			sourceTree = "<group>";
+		};
+		640FED0B2B0548EC00C201E1 /* Crypt */ = {
+			isa = PBXGroup;
+			children = (
+				644AFA2D2AFB41D100F31B45 /* CryptViewController.swift */,
+				644AFA332AFCF05100F31B45 /* CryptTableViewCell.swift */,
+				644AFA352AFCF1E200F31B45 /* Crypt.swift */,
+			);
+			path = Crypt;
+			sourceTree = "<group>";
+		};
+		640FED0C2B05490600C201E1 /* Finance */ = {
+			isa = PBXGroup;
+			children = (
+				644AFA2B2AFB41BE00F31B45 /* FinanceViewController.swift */,
+				644AFA3D2B0135C600F31B45 /* FinanceTableViewCell.swift */,
+				644AFA3B2B0131A500F31B45 /* Finance.swift */,
+			);
+			path = Finance;
+			sourceTree = "<group>";
+		};
+		640FED0D2B05492000C201E1 /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				644AFA2F2AFB41E900F31B45 /* TravelViewController.swift */,
+				644AFA3F2B022A7800F31B45 /* CityCollectionViewCell.swift */,
+				644AFA412B0249F000F31B45 /* City.swift */,
+			);
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		640FED0E2B05495C00C201E1 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				644AFA292AFB41AE00F31B45 /* WeatherViewController.swift */,
+				640FED022B04DF0C00C201E1 /* SecondWeatherViewControl.swift */,
+				640FED082B0531AC00C201E1 /* HourlyWeatherCollectionViewCell.swift */,
+				640FED0F2B054D8400C201E1 /* DailyWeatherCollectionViewCell.swift */,
+				640FED132B057A5400C201E1 /* HeaderCollectionReusableView.swift */,
+				640FED062B04F00200C201E1 /* Weather.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
 		644AFA072AF9829600F31B45 = {
 			isa = PBXGroup;
 			children = (
@@ -106,23 +167,14 @@
 		644AFA122AF9829600F31B45 /* Neobis_iOS_UIScreens */ = {
 			isa = PBXGroup;
 			children = (
-				644AFA132AF9829600F31B45 /* AppDelegate.swift */,
-				644AFA152AF9829600F31B45 /* SceneDelegate.swift */,
-				644AFA172AF9829600F31B45 /* LobbyViewController.swift */,
+				640FED0E2B05495C00C201E1 /* Weather */,
+				640FED0D2B05492000C201E1 /* Travel */,
+				640FED0C2B05490600C201E1 /* Finance */,
+				640FED0A2B0548CE00C201E1 /* Singles */,
+				640FED0B2B0548EC00C201E1 /* Crypt */,
 				644AFA392B011F0B00F31B45 /* TabController.swift */,
-				644AFA292AFB41AE00F31B45 /* WeatherViewController.swift */,
-				644AFA2D2AFB41D100F31B45 /* CryptViewController.swift */,
-				644AFA332AFCF05100F31B45 /* CryptTableViewCell.swift */,
-				644AFA352AFCF1E200F31B45 /* Crypt.swift */,
-				644AFA2B2AFB41BE00F31B45 /* FinanceViewController.swift */,
-				644AFA3D2B0135C600F31B45 /* FinanceTableViewCell.swift */,
-				644AFA3B2B0131A500F31B45 /* Finance.swift */,
-				644AFA2F2AFB41E900F31B45 /* TravelViewController.swift */,
-				644AFA3F2B022A7800F31B45 /* CityCollectionViewCell.swift */,
-				644AFA412B0249F000F31B45 /* City.swift */,
-				644AFA312AFB41F800F31B45 /* SinglesViewController.swift */,
-				644AFA452B0277FE00F31B45 /* SinglesTableViewCell.swift */,
-				644AFA432B02757D00F31B45 /* Singles.swift */,
+				644AFA152AF9829600F31B45 /* SceneDelegate.swift */,
+				644AFA132AF9829600F31B45 /* AppDelegate.swift */,
 				644AFA1C2AF9829700F31B45 /* Assets.xcassets */,
 				644AFA1E2AF9829700F31B45 /* LaunchScreen.storyboard */,
 				644AFA212AF9829700F31B45 /* Info.plist */,
@@ -244,20 +296,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				644AFA182AF9829600F31B45 /* LobbyViewController.swift in Sources */,
 				644AFA2C2AFB41BE00F31B45 /* FinanceViewController.swift in Sources */,
+				640FED092B0531AC00C201E1 /* HourlyWeatherCollectionViewCell.swift in Sources */,
 				644AFA142AF9829600F31B45 /* AppDelegate.swift in Sources */,
 				644AFA322AFB41F800F31B45 /* SinglesViewController.swift in Sources */,
+				640FED102B054D8400C201E1 /* DailyWeatherCollectionViewCell.swift in Sources */,
 				644AFA3C2B0131A500F31B45 /* Finance.swift in Sources */,
 				644AFA3A2B011F0B00F31B45 /* TabController.swift in Sources */,
+				640FED142B057A5400C201E1 /* HeaderCollectionReusableView.swift in Sources */,
 				644AFA302AFB41E900F31B45 /* TravelViewController.swift in Sources */,
 				644AFA2A2AFB41AE00F31B45 /* WeatherViewController.swift in Sources */,
 				644AFA362AFCF1E200F31B45 /* Crypt.swift in Sources */,
+				640FED032B04DF0C00C201E1 /* SecondWeatherViewControl.swift in Sources */,
 				644AFA3E2B0135C600F31B45 /* FinanceTableViewCell.swift in Sources */,
 				644AFA2E2AFB41D100F31B45 /* CryptViewController.swift in Sources */,
 				644AFA422B0249F000F31B45 /* City.swift in Sources */,
 				644AFA162AF9829600F31B45 /* SceneDelegate.swift in Sources */,
 				644AFA462B0277FE00F31B45 /* SinglesTableViewCell.swift in Sources */,
+				640FED072B04F00200C201E1 /* Weather.swift in Sources */,
 				644AFA442B02757D00F31B45 /* Singles.swift in Sources */,
 				644AFA342AFCF05100F31B45 /* CryptTableViewCell.swift in Sources */,
 				644AFA402B022A7800F31B45 /* CityCollectionViewCell.swift in Sources */,

@@ -20,8 +20,9 @@ class TabController: UITabBarController {
         let finance = self.createNav(with: "Finance", and: UIImage(systemName: "dollarsign.circle"), vc: FinanceViewController())
         let travel = self.createNav(with: "Travel", and: UIImage(systemName: "airplane.departure"), vc: TravelViewController())
         let singles = self.createNav(with: "Singles", and: UIImage(systemName: "s.circle"), vc: SinglesViewController())
+        let weather = self.createNav(with: "Weather", and: UIImage(systemName: "sun.min.fill"), vc: WeatherViewController())
      
-        self.setViewControllers([crypt, finance, travel, singles], animated: true)
+        self.setViewControllers([crypt, finance, travel, singles, weather], animated: true)
     }
     
     private func createNav(with title: String, and image: UIImage?, vc: UIViewController) -> UINavigationController {
