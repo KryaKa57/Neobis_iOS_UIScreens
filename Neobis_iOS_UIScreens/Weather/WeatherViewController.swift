@@ -190,7 +190,7 @@ class WeatherViewController: UIViewController {
             make.height.equalTo(weatherInfoStackView.snp.width)
         }
         self.weatherWeeklyButton.snp.makeConstraints {(make) in
-            make.top.lessThanOrEqualTo(weatherInfoStackView.snp.bottom).offset(64)
+            make.top.equalTo(weatherInfoStackView.snp.bottom).offset(64)
             make.bottom.equalToSuperview().inset(64)
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.6)

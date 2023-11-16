@@ -74,7 +74,7 @@ class CryptViewController: UIViewController {
         self.cryptTableView.snp.makeConstraints {(make) in
             make.top.equalTo(headerStackView.snp.bottom).offset(16)
             make.left.right.equalToSuperview().inset(32)
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().inset(64)
         }
     }
 }
